@@ -6,9 +6,9 @@ import AccordionItem from "../accordion/accordion-item/accordion-item";
 
 export default component$(() => {
 useStylesScoped$(HeaderStyles)
-  const hamVisible = useSignal(true)
+  const hamVisible = useSignal(false)
   return (
-    <header>
+    <header class="fixed top-0 left-0 z-10 w-full bg-slate-100" >
         <nav class="flex items-center justify-between p-2">
           
           <Logo/>
@@ -17,7 +17,7 @@ useStylesScoped$(HeaderStyles)
             <div class="bar"></div>
           </button>
           </nav>
-          <aside class={`mobile-nav ${hamVisible.value && "is-active"}`}>
+          <aside class={` mobile-nav ${hamVisible.value && "is-active"}`} >
              <Accordion>
               <AccordionItem labeltext="First Item" itemid="first">
                     <p>Hahah</p>
@@ -37,8 +37,6 @@ useStylesScoped$(HeaderStyles)
 
              </Accordion>
           </aside>
-          
-        
     </header>
   );
 });

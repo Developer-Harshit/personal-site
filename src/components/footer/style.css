@@ -1,0 +1,9 @@
+.github{
+    filter: invert(5%) sepia(72%) saturate(4689%) hue-rotate(266deg) brightness(119%) contrast(109%);
+}
+.youtube{
+    filter: invert(11%) sepia(96%) saturate(5480%) hue-rotate(350deg) brightness(88%) contrast(87%);
+}
+.insta{
+    filter: invert(21%) sepia(97%) saturate(5717%) hue-rotate(353deg) brightness(106%) contrast(76%);
+}
