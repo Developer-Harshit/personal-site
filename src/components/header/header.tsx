@@ -7,14 +7,15 @@ useStylesScoped$(HeaderStyles)
   const hamVisible = useSignal(false)
   return (
     <header>
-        <nav>
+        <nav class="flex items-center justify-between p-2">
           
           <Logo/>
 
           <button  class={`ham ${hamVisible.value && "is-active"}`} onClick$={() => hamVisible.value = !hamVisible.value}>
             <div class="bar"></div>
           </button>
-              <aside class={`mobile-nav ${hamVisible.value && "is-active"}`}>
+          </nav>
+          <aside class={`mobile-nav ${hamVisible.value && "is-active"}`}>
               <ul >
                 <li><a href="">hi</a></li>
                 <li><a href="">hi</a></li>
@@ -22,9 +23,9 @@ useStylesScoped$(HeaderStyles)
                 <li><a href="">hi</a></li>
                 <li><a href="">hi</a></li>
               </ul>
-              </aside>
+          </aside>
           
-        </nav>
+        
     </header>
   );
 });
