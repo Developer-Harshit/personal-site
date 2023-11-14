@@ -9,3 +9,22 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
+ 
+ .line-break{
+    width: 95%;
+    margin :auto;
+    height: 2px;
+    background-color: #13040cd0;
+}
+#hero-div .main-heading{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: white;
+    padding: 0.75rem;
+    box-shadow: -10px -10px 20px rgba(113, 5, 143, 0.36),-10px -10px 1px rgb(147,51,234);
+    background-color: rgba(146, 51, 234, 0.654);
+}
+.about{
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}

@@ -1,5 +1,6 @@
 
 
+
 .ham{
 
     display: block;
@@ -19,7 +20,7 @@
     width: 100%;
     height: 3px;
     margin: 6px 4px;
-    background-color: blue;
+    background-color: rgb(58, 12, 75);
     transition: 0.4s;
 }
 
@@ -38,16 +39,22 @@
 }
 .mobile-nav{
     position: fixed;
+    text-align: center;
     left: 100%;
     width: 100%;
     height: 100%;
-    text-align: center;
-    color: #fff;
-    backdrop-filter: blur(2px) sepia(0.6) ;
-    background-color: rgba(4, 4, 55, 0.83);
     transition: 0.4s;
+    color: #fff;
+    backdrop-filter: blur(5px) sepia(0.) ;
+    background-color: rgba(4, 4, 55, 0.289);
+    
 }
 
 .mobile-nav.is-active{
     left: 0;
+    width: 100%;
+}
+header{
+    background: linear-gradient(#ffffff,#ffffffe2 70%,rgba(255, 255, 255, 0.922));   
+
 }

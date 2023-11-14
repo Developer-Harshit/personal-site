@@ -8,7 +8,7 @@ export default component$(() => {
 useStylesScoped$(FooterStyles)
 
   return (
-    <footer class="m-16">
+    <footer class="m-16 mb-24">
      <ul class="flex gap-4 justify-center">
      
       <li>

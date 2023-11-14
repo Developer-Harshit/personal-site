@@ -24,7 +24,7 @@ label::before{
     margin-right: 10px ;
     font-weight: 800;
 }
-.accordion input[type="radio"]{
+.accordion input{
     display: none;
 }
 .accordion .content{
@@ -35,11 +35,11 @@ label::before{
     overflow: hidden;
     transition: 0.6s ease-in-out;
 }
-.accordion input[type="radio"]:checked ~  .content {
+.accordion input:checked ~  .content {
    max-height: 600px;
   
 }
-input[type="radio"]:checked ~ label::before {
+input:checked ~ label::before {
     content: "-";
  
 }
