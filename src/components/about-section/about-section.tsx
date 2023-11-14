@@ -5,7 +5,7 @@ export default component$(() => {
 
     return (
         <>
-            <article class="mt-12" >
+            <article > 
                 <Heading >
                     <Slot name="title"/>
                 </Heading>

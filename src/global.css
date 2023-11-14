@@ -28,6 +28,7 @@
     font-size: 0.9rem;
     line-height: 1.2rem;
 }
-canvas{
-    overflow: hidden;
+
+article{
+    margin-top: 3rem;
 }

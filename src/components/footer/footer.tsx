@@ -1,7 +1,7 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import GithubLogo from '~/media/github.png?jsx';
-import InstaLogo from '~/media/instagram.png?jsx';
-import YoutubeLogo from '~/media/youtube.png?jsx';
+import GithubLogo from '~/media/social/github.png?jsx';
+import InstaLogo from '~/media/social/instagram.png?jsx';
+import YoutubeLogo from '~/media/social/youtube.png?jsx';
 
 import FooterStyles from "./style.css?inline"
 export default component$(() => {
@@ -10,7 +10,6 @@ useStylesScoped$(FooterStyles)
   return (
     <footer class="m-16 mb-24">
      <ul class="flex gap-4 justify-center">
-     
       <li>
         <a href="http://instagram.com">
         <InstaLogo class="w-8 h-8 insta" />
