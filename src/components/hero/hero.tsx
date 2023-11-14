@@ -1,6 +1,4 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-
-
 import HeroStyles from "./style.css?inline"
 import HeroImage from "~/media/hero-image.jpg?jsx"
 import AboutSection from "../about-section/about-section";

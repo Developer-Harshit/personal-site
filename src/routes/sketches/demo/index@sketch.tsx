@@ -9,6 +9,7 @@ export default component$(() => {
     <>
     <P5card>
       <span q: slot = "links">
+      
       <script src="/js/sketch.js"></script>
       </span>
     </P5card>

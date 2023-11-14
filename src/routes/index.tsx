@@ -6,9 +6,7 @@ export default component$(() => {
   
   return (
     <>
-      <Hero/>
-      
-    
+      <Hero/> 
     </>
   );
 });

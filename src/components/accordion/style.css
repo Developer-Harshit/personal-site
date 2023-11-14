@@ -1,5 +1,4 @@
 
-
 .accordion li {
     list-style: none;
     width: 80%;
@@ -18,7 +17,7 @@
     font-weight: 500;
     cursor: pointer;
 }
-label::before{
+.accordion label::before{
     content: "#";
     font-size: 1.7rem;
     margin-right: 10px ;
@@ -39,7 +38,7 @@ label::before{
    max-height: 600px;
   
 }
-input:checked ~ label::before {
+.accordion input:checked ~ label::before {
     content: "-";
  
 }

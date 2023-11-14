@@ -8,16 +8,14 @@ export default component$(() => {
   return (
     <>
     <script src="/js/libraries/p5.js"></script>
-   
+    <script src="/js/libraries/p5Control.js"></script>
    
     <div  id="sketch-container"  class="absolute top-0 left-0 z-[-100]">
       
     </div>
     <div id="control-container" class="z-10 absolute bottom-[30px]">
       
-      <input type="range" id="ha" />
-      <input type="range" />
-      <input type="range" />
+   
     </div>
     <Slot name="links"/>
     </>
