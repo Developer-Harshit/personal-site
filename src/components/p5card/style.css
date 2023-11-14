@@ -6,3 +6,8 @@ html,body{
     overscroll-behavior: none;
 
 }
+#sketch-container{
+    position: fixed;
+    top:0;
+    left: 0;
+}

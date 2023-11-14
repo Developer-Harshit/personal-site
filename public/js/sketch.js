@@ -1,6 +1,7 @@
 let c;
 function setup() {
-  c = createCanvas(window.innerWidth,window.innerHeight);
+  
+  c = createCanvas(window.innerWidth,window.innerHeight );
   const eContainer = select("#sketch-container")
   c.parent(eContainer)
 
@@ -14,9 +15,6 @@ function windowResized(){
 }
 
 function draw() {
-  
-  
   rect(0,0,width,height)
-  
   line(mouseX,mouseY,pmouseX,pmouseY);
 }

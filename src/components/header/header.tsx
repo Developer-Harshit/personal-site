@@ -15,8 +15,10 @@ useStylesScoped$(HeaderStyles)
   return (
     <header class="fixed top-0 left-0 z-10 w-full bg-slate-100" >
         <nav class="flex items-center justify-between p-2">
-          
+          <a href="/">
           <Logo/>
+          </a>
+          
 
           <button  class={`ham ${hamVisible.value && "is-active"}`} onClick$={toggleHam}>
             <div class="bar"></div>
@@ -25,10 +27,8 @@ useStylesScoped$(HeaderStyles)
           <div class="line-break"></div>
           <aside class={` mobile-nav ${hamVisible.value && "is-active"}`} >
              <Accordion>
-              <AccordionItem labeltext="First Item" itemid="first">
-                    <p>Hahah</p>
-                    <p>Hahah</p>
-                    <p>Hahah</p>
+              <AccordionItem labeltext="Sketches" itemid="sketches">
+                   <a href="/sketches/demo">Demo</a>
               </AccordionItem>
               <AccordionItem labeltext="Second Item" itemid="second">
               <p>Hahah</p>
