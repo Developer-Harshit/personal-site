@@ -19,25 +19,25 @@ export default component$(() => {
         <>
           <DisplayItem
             title="Demo Sketch"
-            desc="An interactive demo sketch"
+            desc="This is an demo sketch to test the features of this site."
             alink="demo">
             <Thumb1></Thumb1>
           </DisplayItem>
           <DisplayItem
             title="Demo Sketch"
-            desc="An interactive demo sketch"
+            desc="This is an demo sketch to test the features of this site."
             alink="demo">
             <Thumb2></Thumb2>
           </DisplayItem>
           <DisplayItem
             title="Demo Sketch"
-            desc="An interactive demo sketch"
+            desc="This is an demo sketch to test the features of this site."
             alink="demo">
             <Thumb3></Thumb3>
           </DisplayItem>
           <DisplayItem
             title="Demo Sketch"
-            desc="An interactive demo sketch"
+            desc="This is an demo sketch to test the features of this site."
             alink="demo">
             <Thumb4></Thumb4>
           </DisplayItem>

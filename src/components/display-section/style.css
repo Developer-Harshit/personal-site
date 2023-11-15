@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 0.5rem;
 
 }
@@ -54,4 +55,20 @@
     border-radius: 20%;
  
     filter: brightness(2) ;
+}
+@media screen and (max-width : 640px) {
+    .display-section ul{
+        flex-wrap: nowrap;
+        flex-direction: column;   
+    }   
+    .display-section img{
+        width: 50svw;
+        height: 50svw;
+        
+    }
+    .display-section li{
+        width: 60svw;
+     
+    }
+    
 }

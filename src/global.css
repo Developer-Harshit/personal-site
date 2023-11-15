@@ -9,7 +9,14 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
- 
+ :root{
+    --my-bg:#21092c;
+    --my-color:#f8f8f8;
+ }
+ body,html{
+    background-color: var(--my-bg);
+    color: var(--my-color);
+ }
  .line-break{
     width: 95%;
     margin :auto;
@@ -31,4 +38,11 @@
 
 article{
     margin-top: 3rem;
+}
+@media (prefers-color-scheme:light){
+    :root{
+        --my-bg:#fff;
+        --my-color:#1f1b1b;
+    }
+    
 }

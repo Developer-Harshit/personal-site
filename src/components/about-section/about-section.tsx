@@ -10,7 +10,7 @@ export default component$(() => {
                     <Slot name="title"/>
                 </Heading>
 
-                <p class="about font-normal text-slate-600 "><Slot name="content"/></p>
+                <p class="about font-normal text-[var(--my-color)] "><Slot name="content"/></p>
             </article>
         </>
     );

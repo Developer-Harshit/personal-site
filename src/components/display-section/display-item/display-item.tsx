@@ -1,5 +1,6 @@
 import { Slot, component$ } from "@builder.io/qwik";
 
+
 interface ItemProps {
   title: string,
   desc: string
@@ -12,16 +13,31 @@ export default component$((props: ItemProps) => {
   return (
     <>
       <li>
-        <a href={`/sketches/${props.alink}`}>
+       
           <Slot />
-        </a>
-        <h3>
-          <a href={`/sketches/${props.alink}`}>
-            {props.title}
-          </a>
-        </h3>
+       
+        <div class="content">
+          
+          <p class="text-sm">{props.desc}</p>
+          <div>
 
-        <p>{props.desc}</p>
+          
+          <div class="line-break"></div>
+          <a href={`/sketches/${props.alink}`}>
+          <h3 class="font-semibold text-slate-300">
+            
+           
+              {props.title}
+           
+            
+          
+          </h3>
+          </a>
+          </div>
+        </div>
+
+
+
       </li>
     </>
   );
