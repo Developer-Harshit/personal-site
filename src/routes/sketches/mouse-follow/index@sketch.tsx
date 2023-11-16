@@ -10,7 +10,7 @@ export default component$(() => {
     <P5card>
       <span q: slot = "links">
       
-      <script src="/js/sketch.js"></script>
+      <script src="/js/MouseFollow.js"></script>
       </span>
     </P5card>
     
@@ -19,11 +19,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Sketch Demo",
+  title: "Mouse Follow",
   meta: [
     {
-      name: "demo sketch",
-      content: "demo sketch for testing purpose",
+      name: "Mouse Follow",
+      content: "decaying line that follows mouse position",
     },
   ],
 };

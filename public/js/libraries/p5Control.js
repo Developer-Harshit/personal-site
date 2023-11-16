@@ -3,7 +3,7 @@ function initCanvas(c){
     c.parent(eContainer)
 }
 
-function makeSlider(labelText,sliderId,minVal,maxVal,jumpVal){
+function makeSlider(labelText,sliderId,minVal,maxVal,jumpVal=0.1){
     const myDiv = createDiv()
     const mySlider = createSlider(minVal, maxVal, (maxVal+minVal)/2, jumpVal)
     const myLabel = createElement("label", labelText)

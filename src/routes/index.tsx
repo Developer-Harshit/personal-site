@@ -18,15 +18,15 @@ export default component$(() => {
         <span q: slot="title">Sketches</span>
         <>
           <DisplayItem
-            title="Demo Sketch"
-            desc="This is an demo sketch to test the features of this site."
-            alink="demo">
+            title="Mouse follow"
+            desc="Decaying line that follows mouse position"
+            alink="mouse-follow">
             <Thumb1></Thumb1>
           </DisplayItem>
           <DisplayItem
-            title="Demo Sketch"
-            desc="This is an demo sketch to test the features of this site."
-            alink="demo">
+            title="Turing Pattern"
+            desc="This simulation made using reaction-diffusion equations"
+            alink="turing-pattern">
             <Thumb2></Thumb2>
           </DisplayItem>
           <DisplayItem
