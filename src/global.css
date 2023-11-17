@@ -34,9 +34,9 @@
     
 
     
-    --time-slow: 1.3s;
-    --time-normal: 0.7s;
-    --time-fast: 0.5s;
+    --time-slow: 1250ms;
+    --time-normal: 700ms;
+    --time-fast: 350ms;
     --transition-ease:cubic-bezier(0.81, 0.23, 0.29, 1.01);
 
     --my-bg:#21092c;
