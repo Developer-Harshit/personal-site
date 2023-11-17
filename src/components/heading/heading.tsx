@@ -1,12 +1,21 @@
-import { Slot, component$ } from "@builder.io/qwik";
+import { Slot, component$, useStylesScoped$ } from "@builder.io/qwik";
+import Styles from "./style.css?inline"
 
-export default component$(() => {
+interface HeadingProps{
+  headid:string
+}
 
+export default component$((props:HeadingProps) => {
 
+  useStylesScoped$(Styles)
   return (
    <>
-    <h2  class=" main-heading  font-bold pb-1 pt-1 text-purple-600 ">
+   
+    <h2 class="main-heading text-purple-600 ">
+      <a class="nav-tag" href={`#${props.headid}`}>#</a>   
+      <span>
        <Slot/>
+       </span>
     </h2>
    
     <div class="line-break"></div>

@@ -15,13 +15,13 @@ html,body{
 #control-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+    gap: var(--sep-small);
+    font-size: var(--size-small);
     
 
 }
 #control-container div{
-    padding: 0.2rem;
+    padding: var(--sep-xsmall);
     display: flex;
     background-color: rgba(0, 0, 0, 0.769);
     backdrop-filter: blur(5px) sepia(0.6);
@@ -29,5 +29,5 @@ html,body{
 }
 #control-container label{
     color: white;
-    margin: 0 0.2rem;
+    margin: 0 var(--sep-xsmall);
 }

@@ -1,0 +1,15 @@
+h2{
+    color: rgb(147 51 234);
+    padding: var(--sep-xsmall) 0;
+    font-weight: var(--weight-dark);
+}
+h2 span{
+    margin-right: var(--sep-normal);
+}
+h2 a{
+    padding: var(--sep-normal);
+    font-size: var(--size-xlarge);
+    opacity: 0.0;
+    transition: opacity 0.2s ease-in-out 0s;
+    
+}

@@ -2,18 +2,20 @@ import { Slot, component$ } from "@builder.io/qwik";
 import Heading from "../heading/heading";
 
 interface SectionProps{
-    secid:string
+    sectid:string,
+    sectclass?:string
+    
 }
 
 export default component$((props:SectionProps) => {
     return (
         <>
-        <section id={props.secid}>
-            <Heading  headid={props.secid}>
-                <Slot name="title" />
+        <section id={props.sectid} class={props.sectclass}>
+            <Heading  headid={props.sectid}>
+                <Slot />
             </Heading>
             <article >
-                <Slot/>
+                <Slot name="content"/>
             </article>
         </section>
         </>

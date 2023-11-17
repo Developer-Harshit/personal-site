@@ -2,8 +2,8 @@
 .accordion li {
     list-style: none;
     width: 80%;
-    padding: 10px;
-    margin: 10px auto;
+    padding: var(--sep-small);
+    margin: var(--sep-small) auto;
     border-radius: 3px;
     
     background-color: rgb(247, 247, 247);
@@ -13,27 +13,31 @@
     display: flex;
     color: rgb(93, 14, 177);
     align-items: baseline;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: var(--size-large);
+    font-weight: var(--weight-normal);
     cursor: pointer;
 }
 .accordion label::before{
-    content: "#";
-    font-size: 1.7rem;
-    margin-right: 10px ;
-    font-weight: 800;
+    content: "+";
+    font-size: var(--size-xlarge);
+    margin-right: var(--sep-small) ;
+    font-weight: var(--weight-dark);
 }
 .accordion input{
     display: none;
 }
 .accordion .content{
     color: #555;
-    padding: 0 100px;
-    line-height: 26px;
+    padding: 0 var(--sep-normal);
+    line-height: var(--size-normal);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sep-small);
     max-height: 0px;
     overflow: hidden;
     transition: 0.6s ease-in-out;
 }
+
 .accordion input:checked ~  .content {
    max-height: 600px;
   

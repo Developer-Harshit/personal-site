@@ -8,21 +8,21 @@ export default component$(() => {
 useStylesScoped$(FooterStyles)
 
   return (
-    <footer class="m-16 mb-24">
-     <ul class="flex gap-4 justify-center">
+    <footer>
+     <ul class="flex gap-[var(--sep-normal)] justify-center">
       <li>
         <a href="http://instagram.com">
-        <InstaLogo class="w-8 h-8 insta" />
+        <InstaLogo class="insta" />
         </a>
       </li>
       <li>
         <a href="http://github.com">
-        <GithubLogo class="w-8 h-8 github" />
+        <GithubLogo class="github" />
         </a>
       </li>
       <li>
         <a href="http://youtube.com">
-        <YoutubeLogo class="w-8 h-8 youtube" />
+        <YoutubeLogo class="youtube" />
         </a>
       </li>
      </ul>

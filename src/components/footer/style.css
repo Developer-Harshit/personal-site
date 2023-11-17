@@ -1,3 +1,14 @@
+footer{
+    margin: var(--sep-large);
+    margin-bottom: var(--sep-xlarge);
+}
+footer img{
+    width: var(--size-xlarge);
+    height: var(--size-xlarge);
+    
+
+}
+
 .github{
     filter: invert(5%) sepia(72%) saturate(4689%) hue-rotate(266deg) brightness(119%) contrast(109%);
 }

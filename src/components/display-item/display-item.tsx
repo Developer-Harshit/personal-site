@@ -18,13 +18,13 @@ export default component$((props: ItemProps) => {
        
         <div class="content">
           
-          <p class="text-sm">{props.desc}</p>
+          <p >{props.desc}</p>
           <div>
 
           
           <div class="line-break"></div>
           <a href={`/sketches/${props.alink}`}>
-          <h3 class="font-semibold text-slate-300">
+          <h3 >
             
            
               {props.title}

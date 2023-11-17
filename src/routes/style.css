@@ -1,0 +1,23 @@
+#hero-div .main-heading{
+    margin-bottom: var(--sep-normal);
+    font-size: var(--size-large);
+    color: white;
+    padding: var(--sep-small);
+    box-shadow: -10px -10px 20px rgba(113, 5, 143, 0.36),-10px -10px 1px rgb(147,51,234);
+    background-color: rgba(146, 51, 234, 0.654);
+}
+.about{
+    font-size: var(--size-normal);
+    font-weight: var(--weight-thin);
+    line-height: var(--size-large);
+
+}
+section{
+    padding:var(--sep-normal) 0 ;
+    margin: 0
+    ;
+}
+
+article{
+    margin: var(--sep-normal) 0;
+}

@@ -1,49 +1,18 @@
 
-
-
-.ham{
-
-    display: block;
-    width: 30px;
-    height: 30px;
-    
-    cursor: pointer;
-    appearance: none;
-    outline: none;
-    border: none;
-
+nav{
+    min-height: 50px;
 
 }
-.ham .bar,.ham::after,.ham::before{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    margin: 6px 4px;
-    background-color: rgb(58, 12, 75);
-    transition: 0.4s;
-}
 
-.ham.is-active::before{
-    transform: rotate(-47deg) translate(-6px,7px);
-    
-}
 
-.ham.is-active::after{
-    
-    transform: rotate(47deg) translate(-6px,-7px);
-}
-
-.ham.is-active .bar{
-    opacity: 0;
-}
 .mobile-nav{
     position: fixed;
     text-align: center;
     left: 100%;
     width: 100%;
     height: 100%;
-    transition: 0.4s;
+    transition: left var(--time-fast);
+    transition-delay: 0s;
     color: #fff;
     backdrop-filter: blur(5px) sepia(0.2) ;
     background-color: rgba(4, 4, 55, 0.289);
@@ -52,7 +21,7 @@
 
 .mobile-nav.is-active{
     left: 0;
-    width: 100%;
+    
 }
 header{
     background: linear-gradient(#ffffff,#ffffffe2 70%,rgba(255, 255, 255, 0.922));   

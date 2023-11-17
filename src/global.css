@@ -9,40 +9,68 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
+ @font-face {
+   font-family: Pacifico;
+   src: url(/fonts/Pacifico-Regular.ttf);
+}
+
  :root{
+    --size-small:0.8rem;
+    --size-normal:1.0rem;
+    --size-large:1.3rem;
+    --size-xlarge:2.0rem;
+
+    
+    --weight-thin: 200;
+    --weight-normal:400;
+    --weight-dark:600;
+    --weight-xdark:900;
+
+    --sep-xsmall:0.3rem;
+    --sep-small:0.7rem;
+    --sep-normal:1.0rem;
+    --sep-large:4.0rem;
+    --sep-xlarge:6.0rem;
+    
+
+    
+    --time-slow: 1.3s;
+    --time-normal: 0.7s;
+    --time-fast: 0.5s;
+    --transition-ease:cubic-bezier(0.81, 0.23, 0.29, 1.01);
+
     --my-bg:#21092c;
     --my-color:#f8f8f8;
  }
- body,html{
-    background-color: var(--my-bg);
-    color: var(--my-color);
- }
- .line-break{
-    width: 95%;
-    margin :auto;
-    height: 2px;
-    background-color: #13040cd0;
-}
-#hero-div .main-heading{
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    color: white;
-    padding: 0.75rem;
-    box-shadow: -10px -10px 20px rgba(113, 5, 143, 0.36),-10px -10px 1px rgb(147,51,234);
-    background-color: rgba(146, 51, 234, 0.654);
-}
-.about{
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-}
-
-article{
-    margin-top: 3rem;
-}
-@media (prefers-color-scheme:light){
+ @media (prefers-color-scheme:light){
     :root{
         --my-bg:#fff;
         --my-color:#1f1b1b;
     }
     
+}
+ body,html{
+    background-color: var(--my-bg);
+    color: var(--my-color);
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--sep-xlarge);
+    
+ }
+ .logo{
+   color: black;
+   font-family: Pacifico ,monospace,sans-serif;
+   font-size: var(--size-xlarge);
+   padding: var(--sep-xsmall);
+   
+   
+
+ }
+ .line-break{
+    width: 95%;
+    margin :auto;
+    height: 1px;
+    background-color: var(--my-color);
+}
+section:hover  h2 a.nav-tag,section:focus  h2 a.nav-tag,section:active  h2 a.nav-tag{
+   opacity: 1;
 }

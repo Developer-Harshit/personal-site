@@ -1,17 +1,18 @@
 #hero-image{
 
     object-fit: cover;
-    margin :0.1rem auto;
+    margin :var(--sep-xsmall) auto;
     width:70vw;
     height:70vw;
     width: 70svw;
     height: 70svw;
    
     -webkit-mask-image: url(/masks/circle-mask.png);
-    mask-image: url(/masks/circle-mask.png);
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
+    
+    mask-image: url(/masks/circle-mask.png);
     mask-position: center;
     mask-size: contain;
     mask-repeat: no-repeat;
