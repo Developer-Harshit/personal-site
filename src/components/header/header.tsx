@@ -5,7 +5,6 @@ import HamStyles from "./ham.css?inline"
 import Accordion from "../accordion/accordion";
 import AccordionItem from "../accordion/accordion-item/accordion-item";
 
-import CodeIcon from "~/media/social/code.png?jsx"
 import NavItem from "./nav-item/nav-item";
 
 
