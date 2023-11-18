@@ -7,8 +7,8 @@ export default component$(() => {
   
   return (
     <>
-    <script src="/js/libraries/p5.js"></script>
-    <script src="/js/libraries/p5Control.js"></script>
+    <script src="/js/libraries/p5.js" defer></script>
+    <script src="/js/libraries/p5Control.js" defer></script>
    
     <div  id="sketch-container"  class="absolute top-0 left-0 z-[-100]">
       

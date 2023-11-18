@@ -5,6 +5,10 @@ import HamStyles from "./ham.css?inline"
 import Accordion from "../accordion/accordion";
 import AccordionItem from "../accordion/accordion-item/accordion-item";
 
+import CodeIcon from "~/media/social/code.png?jsx"
+import NavItem from "./nav-item/nav-item";
+
+
 export default component$(() => {
 useStylesScoped$(HeaderStyles)
 useStylesScoped$(HamStyles)
@@ -15,12 +19,12 @@ useStylesScoped$(HamStyles)
     aForm.reset()
   })
   return (
-    <header class="fixed top-0 left-0 z-10 w-full bg-slate-100" >
+    <header class="fixed top-0 left-0 z-10 w-full " >
         <nav class="flex items-center justify-between ">
-          <a href="/">
+          
           <Logo/>
-          </a>
-          <svg  class={`ham hamRotate ham7 ${hamVisible.value && "active"}`} onClick$={toggleHam}  viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+          
+          <svg  class={`ham ${hamVisible.value && "active"}`} onClick$={toggleHam}  viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
           <path class="line top" d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
     <path class="line middle" d="m 70,50 h -40" />
     <path class="line bottom"
@@ -28,25 +32,23 @@ useStylesScoped$(HamStyles)
  </svg>
 
 
-          {/* <button  class={`ham ${hamVisible.value && "is-active"}`} onClick$={toggleHam}>
-            <div class="bar"></div>
-          </button> */}
+        
           </nav>
          
-          <aside class={` mobile-nav ${hamVisible.value && "is-active"}`} >
+          <aside class={` mobile-aside ${hamVisible.value && "is-active"}`} >
              <Accordion>
               <AccordionItem labeltext="Sketches" itemid="sketches">
-                   <a href="/sketches/demo">Demo</a>
+              <NavItem sname = "demo">Demo</NavItem>
               </AccordionItem>
               <AccordionItem labeltext="Second Item" itemid="second">
-              <p>Hahah</p>
-                    <p>Hahah</p>
-                    <p>Hahah</p>
+              <NavItem sname = "demo">Demo</NavItem>
+              <NavItem sname = "demo">Demo</NavItem>
+              <NavItem sname = "demo">Demo</NavItem>
               </AccordionItem>
               <AccordionItem labeltext="Third Item" itemid="third">
-                    <p>Hahah</p>
-                    <p>Hahah</p>
-                    <p>Hahah</p>
+              <NavItem sname = "demo">Demo</NavItem>
+              <NavItem sname = "demo">Demo</NavItem>
+              <NavItem sname = "demo">Demo</NavItem>
               </AccordionItem>
 
              </Accordion>

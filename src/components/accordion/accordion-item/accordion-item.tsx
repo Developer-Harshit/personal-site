@@ -14,8 +14,7 @@ export default component$((props: ItemProps) => {
   return (
     <li>
         <input 
-        
-        type="radio" 
+        type="checkbox" 
         name="accordion" id={props.itemid}   />
         <label for={props.itemid}>{props.labeltext}</label>
         <div class="content">

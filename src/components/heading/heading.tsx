@@ -11,7 +11,7 @@ export default component$((props:HeadingProps) => {
   return (
    <>
    
-    <h2 class="main-heading text-purple-600 ">
+    <h2 class="main-heading ">
       <a class="nav-tag" href={`#${props.headid}`}>#</a>   
       <span>
        <Slot/>

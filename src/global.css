@@ -9,68 +9,120 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
- @font-face {
+@font-face {
    font-family: Pacifico;
    src: url(/fonts/Pacifico-Regular.ttf);
 }
 
- :root{
-    --size-small:0.8rem;
-    --size-normal:1.0rem;
-    --size-large:1.3rem;
-    --size-xlarge:2.0rem;
+:root {
 
-    
-    --weight-thin: 200;
-    --weight-normal:400;
-    --weight-dark:600;
-    --weight-xdark:900;
 
-    --sep-xsmall:0.3rem;
-    --sep-small:0.7rem;
-    --sep-normal:1.0rem;
-    --sep-large:4.0rem;
-    --sep-xlarge:6.0rem;
-    
 
-    
-    --time-slow: 1250ms;
-    --time-normal: 700ms;
-    --time-fast: 350ms;
-    --transition-ease:cubic-bezier(0.81, 0.23, 0.29, 1.01);
+   --size-small: 0.8rem;
+   --size-normal: 1.0rem;
+   --size-large: 1.3rem;
+   --size-xlarge: 2.0rem;
 
-    --my-bg:#21092c;
-    --my-color:#f8f8f8;
- }
- @media (prefers-color-scheme:light){
-    :root{
-        --my-bg:#fff;
-        --my-color:#1f1b1b;
-    }
-    
+
+   --weight-thin: 200;
+   --weight-normal: 400;
+   --weight-dark: 600;
+   --weight-xdark: 900;
+
+   --sep-xsmall: 0.3rem;
+   --sep-small: 0.7rem;
+   --sep-normal: 1.0rem;
+   --sep-large: 4.0rem;
+   --sep-xlarge: 6.0rem;
+
+
+
+   --time-slow: 1250ms;
+   --time-normal: 700ms;
+   --time-fast: 350ms;
+   --transition-ease: cubic-bezier(0.81, 0.23, 0.29, 1.01);
+
+   --my-bg: #21092c;
+   --my-color: #f8f8f8;
+
+   --neutral-01:247 ,247 ,247;
+   --neutral-02:229 ,229, 229;
+   --neutral-03:214 ,214 ,214;
+   --neutral-04:214 ,214 ,214;
+   --neutral-05:76,76,76;
+   --neutral-06:48,48,48;
+   --neutral-07:33,33,33;
+   --neutral-08:0,0,0;
+
+   --prim-01:247 ,243, 247;
+   --prim-02:225 ,219 ,230;
+   --prim-03:209 ,202 ,214;
+   --prim-04:195 ,188 ,206;
+   --prim-05:54 ,71 ,127;
+   --prim-06:46 ,62 ,100;
+   --prim-07:29, 42, 61;
+   --prim-08:0 ,23 ,61;
+
+
+   --seco-01:201 ,199 ,250;
+   --seco-02:185 ,170 ,242;
+   --seco-03:146 ,127 ,224;
+   --seco-04:140 ,108 ,228;
+   --seco-05:75 ,51 ,166;
+   --seco-06:46 ,20 ,143;
+   --seco-07:28 ,14, 98;
+   --seco-08:15 ,4, 44;
+
+   --high-01:171 ,252 ,211;
+   --high-02:123 ,247 ,225;
+   --high-03:56 ,198 ,211;
+   --high-04:41 ,162 ,227;
+   --high-05:89 ,220 ,243;
+   --high-06:60 ,168 ,207;
+   --high-07:49 ,158 ,242;
+   --high-08:109, 0, 182;
+   /* color: rgb(109, 0, 182); */
+   
+
 }
- body,html{
-    background-color: var(--my-bg);
-    color: var(--my-color);
-    scroll-behavior: smooth;
-    scroll-padding-top: var(--sep-xlarge);
-    
- }
- .logo{
-   color: black;
-   font-family: Pacifico ,monospace,sans-serif;
+
+@media (prefers-color-scheme:light) {
+ 
+
+}
+
+body,
+html {
+   
+   
+   
+   color: rgb(var(--prim-01));
+   scroll-behavior: smooth;
+   scroll-padding-top: var(--sep-xlarge);
+}
+body{
+
+   background: linear-gradient(180deg, rgb(var(--seco-08)), rgb(var(--prim-08)) , rgb(var(--neutral-08)));
+   
+
+}
+
+.logo {
+   color:rgb(var(--seco-01));
+   font-family: Pacifico, monospace, sans-serif;
    font-size: var(--size-xlarge);
    padding: var(--sep-xsmall);
-   
-   
-
- }
- .line-break{
-    width: 95%;
-    margin :auto;
-    height: 1px;
-    background-color: var(--my-color);
 }
-section:hover  h2 a.nav-tag,section:focus  h2 a.nav-tag,section:active  h2 a.nav-tag{
+
+.line-break {
+   width: 95%;
+   margin: auto;
+   height: 1px;
+   background-color: var(--my-color);
+}
+
+section:hover h2 a.nav-tag,
+section:focus h2 a.nav-tag,
+section:active h2 a.nav-tag {
    opacity: 1;
 }

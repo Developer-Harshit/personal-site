@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-// import Image from "~/media/logo.jpg?jsx"
+import { Link } from "@builder.io/qwik-city";
+
 
 export default component$(() => {
 
@@ -7,8 +8,8 @@ export default component$(() => {
   return (
    
         <>
-          <p class="logo">H</p>
-            {/* <Image class="w-12 h-12"/> */}
+        
+          <Link class="logo" href="/">H</Link>
         </>  
         
           

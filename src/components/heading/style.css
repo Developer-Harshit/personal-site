@@ -1,5 +1,5 @@
 h2{
-    color: rgb(147 51 234);
+    color: rgb(var(--high-07));
     padding: var(--sep-xsmall) 0;
     font-weight: var(--weight-dark);
 }

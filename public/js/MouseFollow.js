@@ -2,6 +2,7 @@
 let surf_1
 let lineShader
 let sizeSlider
+let framePara
 function preload() {
   
    
@@ -12,6 +13,8 @@ function windowResized(){
 }
 function setup() {
     let c = createCanvas(window.innerWidth,window.innerHeight, WEBGL)
+   
+
     initCanvas(c)
 
     surf_1 = createGraphics(width, height, WEBGL)
@@ -26,6 +29,8 @@ function setup() {
     pixelDensity(1)
 
     sizeSlider = makeSlider("Size","size-slider",1,15,0.1)
+    framePara = createP("hiiiii")
+    framePara.parent(select("#control-container"))
 
 }
 function lerpFloat(a,b,t){
@@ -56,6 +61,6 @@ function draw() {
     rect(-width / 2, -height / 2, width, height)
 
    
-
+    framePara.html(int(frameRate()))
 
 }

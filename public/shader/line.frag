@@ -19,32 +19,21 @@ float line (vec2 p1, vec2 p2, vec2 uv, float a){
         
     return r;
 }
-vec4 lerp(inout vec4 a,vec4 b ,float t){
-  return a + (b-a)*t ;
-}
+
 vec4 blur(){
     vec2 off = 1.0 / ures.xy;
     vec4 a0  = texture2D(utex_0,uv); 
-    vec4 b = vec4(vec3(0.0),0.0);
-    a0 = lerp(a0,b,0.3);
-    // bottom right
-    vec4 a1  = texture2D(utex_0, uv + off); 
-    // top left
-    vec4 a2  = texture2D(utex_0, uv - off); 
-    // bottom left
-    vec4 a3  = texture2D(utex_0,uv + vec2(off.x,-off.y)); 
-    // top right
-    vec4 a4  = texture2D(utex_0,uv + vec2(-off.x,off.y)); 
-    // right
-    vec4 a5  = texture2D(utex_0,uv + vec2(off.x,0.0)); 
-    // left
-    vec4 a6  = texture2D(utex_0,uv - vec2(off.x,0.0)); 
-    // top
-    vec4 a7  = texture2D(utex_0,uv + vec2(0.0,off.y)); 
-    // bottom
-    vec4 a8  = texture2D(utex_0,uv - vec2(0.0,off.y)); 
 
-    a0 = (a0+a1+a2+a3+a4+a5+a6+a7+a8)/9.0 ;
+    // right
+    vec4 a1  = texture2D(utex_0,uv + vec2(off.x,0.0)); 
+    // left
+    vec4 a2  = texture2D(utex_0,uv - vec2(off.x,0.0)); 
+    // top
+    vec4 a3  = texture2D(utex_0,uv + vec2(0.0,off.y)); 
+    // bottom
+    vec4 a4  = texture2D(utex_0,uv - vec2(0.0,off.y)); 
+
+    a0 = (a0+a1+a2+a3+a4)/5.2 ;
     return a0;
 }
 

@@ -6,12 +6,12 @@
     margin: var(--sep-small) auto;
     border-radius: 3px;
     
-    background-color: rgb(247, 247, 247);
-    box-shadow: 2px 2px 10px -1px rgb(30, 6, 51) -2px -2px 10px -1px rgba(233, 233, 234, 0.901)
+    background: rgba(var(--prim-01),0.7);
+    backdrop-filter: blur(20px);
 }
 .accordion li label{
     display: flex;
-    color: rgb(93, 14, 177);
+    color: rgb(var(--seco-08));
     align-items: baseline;
     font-size: var(--size-large);
     font-weight: var(--weight-normal);
@@ -26,8 +26,12 @@
 .accordion input{
     display: none;
 }
-.accordion .content{
-    color: #555;
+
+
+.accordion .content {
+    color: rgb(var(--high-08));
+    
+    font-weight: var(--weight-dark);
     padding: 0 var(--sep-normal);
     line-height: var(--size-normal);
     display: flex;
@@ -35,7 +39,8 @@
     gap: var(--sep-small);
     max-height: 0px;
     overflow: hidden;
-    transition: 0.6s ease-in-out;
+    transition: var(--time-slow);
+    transition-delay: 0s;
 }
 
 .accordion input:checked ~  .content {

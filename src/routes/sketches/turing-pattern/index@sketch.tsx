@@ -10,7 +10,7 @@ export default component$(() => {
     <P5card>
       <span q: slot = "links">
       
-      <script src="/js/TuringPattern.js"></script>
+      <script src="/js/TuringPattern.js" defer></script>
       </span>
     </P5card>
     

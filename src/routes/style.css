@@ -1,10 +1,10 @@
 #hero-div .main-heading{
     margin-bottom: var(--sep-normal);
     font-size: var(--size-large);
-    color: white;
+    color: rgb(var(--neutral-01));
     padding: var(--sep-small);
-    box-shadow: -10px -10px 20px rgba(113, 5, 143, 0.36),-10px -10px 1px rgb(147,51,234);
-    background-color: rgba(146, 51, 234, 0.654);
+    box-shadow: -10px -10px 20px rgba(var(--high-05), 0.36),-10px -10px 1px rgb(147,51,234);
+    background-color: rgba(var(--high-04), 0.654);
 }
 .about{
     font-size: var(--size-normal);
@@ -21,3 +21,27 @@ section{
 article{
     margin: var(--sep-normal) 0;
 }
+main{
+    padding: var(--sep-normal);
+    padding-top: var(--sep-xlarge);
+    
+}
+body{
+    position: relative;
+}
+body::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 10%;
+    
+    
+   
+    filter:url(/masks/noise.svg#nnnoise-filter) ;
+
+    mix-blend-mode: hard-light;
+} 

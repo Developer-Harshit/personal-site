@@ -1,11 +1,5 @@
 
-nav{
-    min-height: 50px;
-
-}
-
-
-.mobile-nav{
+.mobile-aside{
     position: fixed;
     text-align: center;
     left: 100%;
@@ -13,17 +7,19 @@ nav{
     height: 100%;
     transition: left var(--time-fast);
     transition-delay: 0s;
-    color: #fff;
-    backdrop-filter: blur(5px) sepia(0.2) ;
-    background-color: rgba(4, 4, 55, 0.289);
+ 
+    background: rgba(var(--prim-08),0.2);
+    backdrop-filter: blur(20px);
     
 }
 
-.mobile-nav.is-active{
+.mobile-aside.is-active{
     left: 0;
     
 }
-header{
-    background: linear-gradient(#ffffff,#ffffffe2 70%,rgba(255, 255, 255, 0.922));   
+nav{
+    background: rgba(var(--high-08),0.2);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgb(var(--prim-01));
 
 }

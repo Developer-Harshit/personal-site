@@ -1,12 +1,10 @@
 footer{
-    margin: var(--sep-large);
-    margin-bottom: var(--sep-xlarge);
+    padding: var(--sep-large);
+    padding-bottom: var(--sep-xlarge);
 }
 footer img{
     width: var(--size-xlarge);
     height: var(--size-xlarge);
-    
-
 }
 
 .github{

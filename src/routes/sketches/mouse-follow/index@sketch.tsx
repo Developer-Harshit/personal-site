@@ -10,7 +10,7 @@ export default component$(() => {
     <P5card>
       <span q: slot = "links">
       
-      <script src="/js/MouseFollow.js"></script>
+      <script src="/js/MouseFollow.js" defer></script>
       </span>
     </P5card>
     

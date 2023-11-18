@@ -22,7 +22,7 @@ export default component$(() => {
     <>
       
       <Header />
-      <main class="m-4 mt-24 ">
+      <main >
         <Slot />
       </main>
       <Footer />

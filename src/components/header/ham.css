@@ -7,86 +7,49 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 5rem;
+    
 
 }
-
-
-
-.ham .top,
-.ham .middle,
-.ham .bottom {
-    stroke-width: 2;
-}
-
-.hamRotate.active {
+.ham.active{
     transform: rotate(45deg) scale(0.7);
 }
-
-
-
 .line {
     fill: none;
     transition: stroke-dasharray var(--time-fast), stroke-dashoffset var(--time-fast), stroke-width var(--time-fast);
     transition-delay: 0s;
-    stroke: #000;
-
+    stroke: rgb(var(--seco-01));
     stroke-linecap: round;
 }
 
-.ham .top,
-.ham .middle,
-.ham .bottom {
+.ham .line{
     stroke-width: 3.5;
 }
 
-.ham.active .top,
-.ham.active .middle,
-.ham.active .bottom {
+.ham.active .line {
     stroke-width: 2.0;
-
-
 }
 
-.ham4 .top {
-    stroke-dasharray: 40 121;
-}
-
-.ham4 .bottom {
-    stroke-dasharray: 40 121;
-}
-
-.ham4.active .top {
-    stroke-dashoffset: -68px;
-}
-
-.ham4.active .bottom {
-    stroke-dashoffset: -68px;
-}
-
-
-
-.ham7 .top {
+.ham .top {
     stroke-dasharray: 40 82;
 }
 
-.ham7 .middle {
+.ham .middle {
     stroke-dasharray: 40 111;
 }
 
-.ham7 .bottom {
+.ham .bottom {
     stroke-dasharray: 40 161;
 }
 
-.ham7.active .top {
+.ham.active .top {
     stroke-dasharray: 17 82;
     stroke-dashoffset: -62px;
 }
 
-.ham7.active .middle {
+.ham.active .middle {
     stroke-dashoffset: 23px;
 }
 
-.ham7.active .bottom {
+.ham.active .bottom {
     stroke-dashoffset: -83px;
 }
