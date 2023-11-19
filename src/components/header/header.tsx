@@ -42,7 +42,7 @@ useStylesScoped$(HamStyles)
               <AccordionItem labeltext="Second Item" itemid="second">
               <NavItem sname = "demo">Demo</NavItem>
               <NavItem sname = "demo">Demo</NavItem>
-              <NavItem sname = "demo">Demo</NavItem>
+              <NavItem sname = "p5-demo">p5 Demo</NavItem>
               </AccordionItem>
               <AccordionItem labeltext="Third Item" itemid="third">
               <NavItem sname = "demo">Demo</NavItem>

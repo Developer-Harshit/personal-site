@@ -1,5 +1,6 @@
 import { Slot, component$ } from "@builder.io/qwik";
 
+
 import CodeIcon from "~/media/social/code.png?jsx"
 interface ItemProps {
     sname:string 
