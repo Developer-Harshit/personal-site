@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@types/three": "^0.158.2",
+    "fast-sort": "^3.4.0",
     "p5js-wrapper": "^1.2.3",
     "three": "^0.158.0"
   }
