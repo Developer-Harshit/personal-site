@@ -10,6 +10,7 @@ ul {
     padding: 1rem;
     position: relative;
     cursor: grab;
+    
   }
 
   .colordiv::after {
@@ -49,9 +50,11 @@ ul {
   div {
     text-align: center;
   }
+ 
   img {
+
     inline-size: 95%;
     block-size: 95%;
     display: inline-block;
-    border: 1px solid white;
+  
   }

@@ -49,13 +49,13 @@ import {
     })
   
     const removeColor = $((e:any) => {
-      let col = e.target.getAttribute('data-color')
+      const col = e.target.getAttribute('data-color')
       const index = store.palette.indexOf(col)
       // only splice array when item is found
       if (index > -1) store.palette.splice(index, 1) // 2nd parameter means remove one item only
     })
     const addColor = $((e:any) => {
-      let col = e.target.value
+      const  col = e.target.value
   
       store.palette.push(col)
       // only splice array when item is found
@@ -63,23 +63,23 @@ import {
     const handleUpload = $((e:any) => {
       if (e.target.files.length > 0) {
         const imageElement = document.getElementById('sample') as HTMLImageElement
-        if (imageElement)
+       
           imageElement.src = URL.createObjectURL(e.target.files[0])
       }
       e.target.value = null
-      console.log(e.target)
+      
     })
     const handleRadio = $(() => {
       const checkedInput = document.querySelector(
         'input[name="rmode"]:checked'
       ) as HTMLInputElement
-      if (checkedInput) rmode.value = parseInt(checkedInput.value)
+       rmode.value = parseInt(checkedInput.value)
     })
     const handleSize = $(() => {
       const checkedInput = document.querySelector(
         'input[name="resmode"]:checked'
       ) as HTMLInputElement
-      if (checkedInput) resmode.value = parseInt(checkedInput.value)
+      resmode.value = parseInt(checkedInput.value)
     })
     
    
@@ -112,6 +112,7 @@ import {
                 data-color={col}
                 onClick$={removeColor}
                 style={`background-color:${col}`}
+                key={col + Math.random()}
               >
                
                 {col}
@@ -121,9 +122,7 @@ import {
   
             <label for="colorinput" id="colorlabel">
               <input
-                class="none"
-                id="colorinput"
-                type="color"
+                class="none" id="colorinput" type="color"
                 onChange$={addColor}
               />
             </label>
@@ -134,21 +133,21 @@ import {
           <div>
             <h3>Mode</h3>
             {modes.map((m) => (
-              <>
+              <span key={m.id}>
                 <input type="radio" id={m.id} name="rmode" checked
                 value={m.val} onChange$={handleRadio}/>
                 <label for={m.id}>{m.text}</label><br />
-              </>
+              </span>
             ))}
           </div>
           <div>
             <h3>Resolution</h3>
             {resModes.map((m) => (
-              <>
+              <span key={m.id}>
                 <input type="radio" id={m.id} name="resmode" checked
                 value={m.val} onChange$={handleSize}/>
                 <label for={m.id}>{m.text}</label>
-              </>
+              </span>
             ))}
             <p>Original resolution is not recommended if dimentions are too big</p>
           </div>
@@ -165,10 +164,13 @@ import {
             Start
           </button>
         </div>
-        <div>
+        <div >
          
-  
+        
           <img id="sample" 
+          src='/sample.png'
+          width="500"
+          height="500"
 					
 					/>
 
