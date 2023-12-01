@@ -46,3 +46,4 @@ lerna-debug.log*
 # my ignores
 demo
 shaders
+glsl
