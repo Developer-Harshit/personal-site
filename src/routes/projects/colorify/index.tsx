@@ -5,6 +5,7 @@ import {
     useVisibleTask$,
     $,
 		useStylesScoped$,
+   
   } from '@builder.io/qwik'
   import Manipulator from './main'
 	import Styles from "./style.css?inline"
@@ -12,15 +13,21 @@ import {
 		useStylesScoped$(Styles)
 
     const modes = [
-      { val: 0, id: 'near', text: 'Nearest Color' },
-      { val: 1, id: 'lumi', text: 'By Luminance' },
       { val: 2, id: 'bw', text: 'Black & White' },
+      { val: 1, id: 'lumi', text: 'By Luminance' },
+      { val: 0, id: 'near', text: 'Nearest Color' },
     ]
-  
+  const resModes = [
+    
+    { val: 1, id: 'original', text: 'Original' },
+    { val: 0, id: 'optimized', text: 'Optimized' },
+  ]
     const loaded = useSignal(false)
     const loop = useSignal(false)
     const finished = useSignal(false)
+
     const rmode = useSignal(0)
+    const resmode = useSignal(0)
     const store = useStore({
       palette: [
         '#003049',
@@ -38,7 +45,7 @@ import {
       loaded,
       loop,
       finished,
-      rmode,
+      rmode,resmode
     })
   
     const removeColor = $((e:any) => {
@@ -68,16 +75,28 @@ import {
       ) as HTMLInputElement
       if (checkedInput) rmode.value = parseInt(checkedInput.value)
     })
+    const handleSize = $(() => {
+      const checkedInput = document.querySelector(
+        'input[name="resmode"]:checked'
+      ) as HTMLInputElement
+      if (checkedInput) resmode.value = parseInt(checkedInput.value)
+    })
+    
+   
+   
   
     useVisibleTask$(() => {
-      const manipulator = new Manipulator('sample', store)
-      const startButtom = document.getElementById('start-btn')
-    	// @ts-ignore
-      startButtom.addEventListener('click', () => {
+      
+    const manipulator =new Manipulator('sample', store)
+    const startButton = document.getElementById("start-btn") as HTMLFormElement
+    
+    startButton.addEventListener("click",()=>{
         console.log('starting')
         manipulator.init()
         manipulator.animate()
-      })
+
+    })
+      
     })
   
     
@@ -94,7 +113,9 @@ import {
                 onClick$={removeColor}
                 style={`background-color:${col}`}
               >
+               
                 {col}
+               
               </li>
             ))}
   
@@ -108,28 +129,32 @@ import {
             </label>
           </ul>
         </div>
-        <div>
+        <div >
           <h2>Controls</h2>
           <div>
+            <h3>Mode</h3>
             {modes.map((m) => (
               <>
-                <input
-                  type="radio"
-                  id={m.id}
-                  name="rmode"
-                  value={m.val}
-                  onChange$={handleRadio}
-                />
-                <label for={m.id}>{m.text}</label>
-                <br />
+                <input type="radio" id={m.id} name="rmode" checked
+                value={m.val} onChange$={handleRadio}/>
+                <label for={m.id}>{m.text}</label><br />
               </>
             ))}
           </div>
+          <div>
+            <h3>Resolution</h3>
+            {resModes.map((m) => (
+              <>
+                <input type="radio" id={m.id} name="resmode" checked
+                value={m.val} onChange$={handleSize}/>
+                <label for={m.id}>{m.text}</label>
+              </>
+            ))}
+            <p>Original resolution is not recommended if dimentions are too big</p>
+          </div>
           <input
-            class="none"
-            type="file"
-            id="img"
-            accept="image/*"
+            class="none" type="file"
+            id="img" accept="image/*"
             onChange$={handleUpload}
           />
           <button id="input-btn">
@@ -141,10 +166,14 @@ import {
           </button>
         </div>
         <div>
-          <h2>image</h2>
+         
   
-          <img id="sample" src="/samples/sample.jpg" />
-  
+          <img id="sample" 
+					
+					/>
+
+					
+          
           <h2 class={!finished.value && 'none'}>
             <a href="#" download="output.png" id="download-sample">
               Download
