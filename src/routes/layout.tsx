@@ -1,8 +1,8 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot, useStyles$ } from "@builder.io/qwik";
 import { Link, type RequestHandler } from "@builder.io/qwik-city";
 
 
-
+import Styles from "./style.css?inline"
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
   // https://qwik.builder.io/docs/caching/
@@ -15,10 +15,9 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  
+  useStyles$(Styles)
   return (
     <>
-      
     <header>
       <Link href="/projects/colorify">Colorify</Link>
     </header>
