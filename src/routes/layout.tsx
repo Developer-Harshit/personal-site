@@ -1,8 +1,9 @@
 import { component$, Slot, useStyles$ } from "@builder.io/qwik";
-import { Link, type RequestHandler } from "@builder.io/qwik-city";
+import { type RequestHandler } from "@builder.io/qwik-city";
 
-
-import Styles from "./style.css?inline"
+import Styles from "./style.css?inline";
+import AnchorStyles from "../components/styles/a-style.css?inline";
+import Header from "~/components/header/header";
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
   // https://qwik.builder.io/docs/caching/
@@ -15,16 +16,14 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  useStyles$(Styles)
+  useStyles$(Styles);
+  useStyles$(AnchorStyles);
   return (
     <>
-    <header>
-      <Link href="/projects/colorify">Colorify</Link>
-    </header>
-      <main >
+      <Header />
+      <main>
         <Slot />
       </main>
-     
     </>
   );
 });
