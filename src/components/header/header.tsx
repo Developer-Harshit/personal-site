@@ -6,18 +6,16 @@ import Styles from "./style.css?inline";
 export default component$(() => {
   useStylesScoped$(Styles);
   return (
-    <>
-      <header>
-        <Logo />
-        <nav>
-          <Link href="/" class="link">
-            blogs
-          </Link>
-          <Link href="/" class="link">
-            about.me
-          </Link>
-        </nav>
-      </header>
-    </>
+    <header>
+      <Logo />
+      <nav>
+        <Link href="/" class="link">
+          blogs
+        </Link>
+        <Link href="/" class="link">
+          about.me
+        </Link>
+      </nav>
+    </header>
   );
 });

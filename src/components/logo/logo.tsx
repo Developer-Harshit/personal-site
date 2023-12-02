@@ -4,10 +4,8 @@ import Styles from "./style.css?inline";
 export default component$(() => {
   useStyles$(Styles);
   return (
-    <>
-      <Link href="/" class="logo">
-        harshit
-      </Link>
-    </>
+    <Link href="/" class="logo">
+      harshit
+    </Link>
   );
 });

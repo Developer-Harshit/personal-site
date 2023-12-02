@@ -1,3 +1,14 @@
+a,
+span,
+button,
+h2,
+h3 {
+  font-family: "Itim", "Poppins", sans-serif;
+}
+p,
+h1 {
+  font-family: "Poppins", sans-serif;
+}
 @font-face {
   font-family: Pacifico;
   src: url(/fonts/Pacifico-Regular.ttf);
