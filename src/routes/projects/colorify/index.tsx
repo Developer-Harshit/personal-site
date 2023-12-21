@@ -8,8 +8,10 @@ import {
 } from "@builder.io/qwik";
 import Manipulator from "./main";
 import Styles from "./style.css?inline";
+import RadioStyles from "~/components/styles/radio-style.css?inline";
 export default component$(() => {
   useStylesScoped$(Styles);
+  useStylesScoped$(RadioStyles);
 
   const modes = [
     { val: 2, id: "bw", text: "Black & White" },
@@ -95,7 +97,7 @@ export default component$(() => {
 
   return (
     <>
-      <div>
+      <section id="pal-sect">
         <h2>Palette</h2>
         <ul>
           {store.palette.map((col) => (
@@ -119,41 +121,43 @@ export default component$(() => {
             />
           </label>
         </ul>
-      </div>
-      <div>
-        <h2>Controls</h2>
+      </section>
+      <section id="control-sect">
         <div>
           <h3>Mode</h3>
-          {modes.map((m) => (
-            <span key={m.id}>
-              <input
-                type="radio"
-                id={m.id}
-                name="rmode"
-                checked
-                value={m.val}
-                onChange$={handleRadio}
-              />
-              <label for={m.id}>{m.text}</label>
-              <br />
-            </span>
-          ))}
+          <ul class="container radio-div">
+            {modes.map((m) => (
+              <div key={m.id} class="radio-div">
+                <input
+                  type="radio"
+                  id={m.id}
+                  name="rmode"
+                  checked
+                  value={m.val}
+                  onChange$={handleRadio}
+                />
+                <label for={m.id}>{m.text}</label>
+              </div>
+            ))}
+          </ul>
         </div>
         <div>
           <h3>Resolution</h3>
-          {resModes.map((m) => (
-            <span key={m.id}>
-              <input
-                type="radio"
-                id={m.id}
-                name="resmode"
-                checked
-                value={m.val}
-                onChange$={handleSize}
-              />
-              <label for={m.id}>{m.text}</label>
-            </span>
-          ))}
+          <ul class="container radio-div">
+            {resModes.map((m) => (
+              <div key={m.id}>
+                <input
+                  type="radio"
+                  id={m.id}
+                  name="resmode"
+                  checked
+                  value={m.val}
+                  onChange$={handleSize}
+                />
+                <label for={m.id}>{m.text}</label>
+              </div>
+            ))}
+          </ul>
           <p>
             Original resolution is not recommended if dimentions are too big
           </p>
@@ -172,7 +176,7 @@ export default component$(() => {
         <button class={!loaded.value && "none"} id="start-btn">
           Start
         </button>
-      </div>
+      </section>
       <div>
         <img id="sample" src="/sample.png" width="500" height="500" />
 

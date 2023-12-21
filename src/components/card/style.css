@@ -1,7 +1,7 @@
-.card-sect{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 0.2rem;
-    row-gap: 1rem;
+.card-sect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.2rem;
+  row-gap: 1rem;
 }

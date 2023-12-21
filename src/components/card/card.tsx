@@ -1,4 +1,4 @@
-import {  component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 
 import { Link } from "@builder.io/qwik-city";
 import { Image } from "@unpic/qwik";
@@ -13,7 +13,6 @@ interface cardItemProp {
 interface cardProp {
   items: cardItemProp[];
   cid: string;
-  
 }
 
 const CardItem = component$((prop: cardItemProp) => {
@@ -21,24 +20,25 @@ const CardItem = component$((prop: cardItemProp) => {
   return (
     <>
       <article key={prop.isrc}>
-        <Image src={"/thumbnails/" + prop.isrc + ".png"}
-           layout="constrained"
-           width={480}
-           height={128}
-        backgorund="#8a2be2"
-        alt={prop.title}
+        <Image
+          src={"/thumbnails/" + prop.isrc + ".png"}
+          layout="constrained"
+          width={480}
+          height={128}
+          backgorund="#8a2be2"
+          alt={prop.title}
         />
         <div class="card-info">
-        <h3>
-          <Link href={prop.ahref}>{prop.title}</Link>
-        </h3>
+          <h3>
+            <Link href={prop.ahref}>{prop.title}</Link>
+          </h3>
 
-        <div class="tags">
-          {prop.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
+          <div class="tags">
+            {prop.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
             ))}
+          </div>
         </div>
-      </div>
       </article>
     </>
   );

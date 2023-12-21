@@ -146,6 +146,7 @@ class Manipulator {
     this.renderer = new WebGLRenderer({ antialias: true });
 
     this.resetScene();
+    this.renderer.setPixelRatio(1);
 
     this.initilized = true;
   }

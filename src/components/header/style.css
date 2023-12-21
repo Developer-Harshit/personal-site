@@ -1,9 +1,13 @@
 header {
+  background-color: rgba(220, 245, 243, 0.668);
+  position: fixed;
+  width: 100%;
+  top: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: baseline;
-  padding: 0px 0.5rem;
+  justify-content: space-between;
+  z-index: 10;
 }
 header nav {
   display: flex;
