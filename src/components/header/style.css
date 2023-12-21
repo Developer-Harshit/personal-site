@@ -1,5 +1,6 @@
 header {
-  background-color: rgba(220, 245, 243, 0.668);
+  background-color: rgba(220, 245, 243, 0.757);
+  backdrop-filter: blur(4px);
   position: fixed;
   width: 100%;
   top: 0;
