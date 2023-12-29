@@ -1,15 +1,16 @@
 ---
+import Link from "./Link.astro";
 import Logo from "./Logo.astro";
 ---
 
 <header>
   <Logo />
   <nav>
-    
-    <a href="/" class="link"> blogs</a>
-    <a href="/" class="link"> about.me</a>
+    <Link href="/">blogs</Link>
+    <Link href="/">about.me</Link>
   </nav>
 </header>
+
 <style>
   header {
     background-color: rgba(255, 255, 255, 0.337);
@@ -26,6 +27,5 @@ import Logo from "./Logo.astro";
   }
   header nav {
     display: flex;
-    gap: min(0.7rem, 5svw);
   }
 </style>

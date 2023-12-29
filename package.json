@@ -12,5 +12,8 @@
   "dependencies": {
     "@unpic/astro": "^0.0.37",
     "astro": "^4.0.8"
+  },
+  "devDependencies": {
+    "@vite-pwa/astro": "^0.2.0"
   }
 }

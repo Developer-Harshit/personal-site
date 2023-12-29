@@ -15,6 +15,8 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-ico" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -34,7 +36,9 @@ const { title } = Astro.props;
     padding: 0;
     margin: 0;
     background-color: azure;
-    background: linear-gradient(-15deg,#e49efbb9 , #f0ffffb9) fixed,url("/grid2.png") center / var(--grid-size)  repeat;
+    background:
+      linear-gradient(-15deg, #e49efbb9, #f0ffffb9) fixed,
+      url("/grid2.png") center / var(--grid-size) repeat;
 
     position: relative;
   }
@@ -61,7 +65,7 @@ const { title } = Astro.props;
   }
   @font-face {
     font-family: Poppins;
-    src: url(/fonts/Poppins-Regular.ttf);
+    src: url(/fonts/Poppins-Medium.ttf);
   }
 
   @font-face {
