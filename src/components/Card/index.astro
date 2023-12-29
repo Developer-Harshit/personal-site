@@ -1,0 +1,39 @@
+---
+import Item from "./item.astro";
+
+interface cardItemProp {
+  href: string;
+  src: string;
+  title: string;
+  tags: string[];
+}
+interface Props {
+  items: cardItemProp[];
+  cid: string;
+}
+
+const { items, cid } = Astro.props;
+---
+
+<section id={cid} class="card-sect">
+  {
+    items.map((item) => (
+      <Item
+        href={item.href}
+        src={item.src}
+        title={item.title}
+        tags={item.tags}
+      />
+    ))
+  }
+</section>
+
+<style>
+  .card-sect {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 0.2rem;
+    row-gap: 1rem;
+  }
+</style>

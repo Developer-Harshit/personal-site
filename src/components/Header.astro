@@ -1,0 +1,30 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<header>
+  <Logo />
+  <nav>
+    hello hi
+    <a href="/" class="link"> blogs</a>
+    <a href="/" class="link"> about.me</a>
+  </nav>
+</header>
+<style>
+  header {
+    background-color: rgba(220, 245, 243, 0.757);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    z-index: 10;
+  }
+  header nav {
+    display: flex;
+    gap: min(0.7rem, 5svw);
+  }
+</style>
