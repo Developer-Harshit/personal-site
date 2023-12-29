@@ -1,54 +1,15 @@
 {
-  "name": "my-qwik-empty-starter",
-  "description": "App with Routing built-in ready to create your app",
-  "engines": {
-    "node": ">=15.0.0"
-  },
-  "private": true,
-  "trustedDependencies": [
-    "sharp"
-  ],
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "qwik build",
-    "build.client": "vite build",
-    "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.server": "vite build -c adapters/vercel-edge/vite.config.ts",
-    "build.types": "tsc --incremental --noEmit",
-    "deploy": "vercel deploy",
-    "dev": "npm run fmt && vite --mode ssr",
-    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
-    "fmt": "prettier --write .",
-    "fmt.check": "prettier --check .",
-    "lint": "eslint \"src/**/*.ts*\"",
-    "preview": "qwik build preview && vite preview --open",
-    "start": "vite --open --mode ssr",
-    "qwik": "qwik"
-  },
-  "devDependencies": {
-    "@builder.io/qwik": "^1.2.17",
-    "@builder.io/qwik-city": "^1.2.17",
-    "@types/eslint": "^8.44.4",
-    "@types/node": "^20.8.4",
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.51.0",
-    "eslint-plugin-qwik": "^1.2.17",
-    "postcss": "^8.4.31",
-    "prettier": "^3.1.0",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.2.2",
-    "undici": "^5.26.0",
-    "vercel": "^32.5.5",
-    "vite": "^4.4.11",
-    "vite-plugin-glsl": "^1.1.2",
-    "vite-tsconfig-paths": "^4.2.1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@types/three": "^0.158.2",
-    "@unpic/qwik": "^0.0.36",
-    "fast-sort": "^3.4.0",
-    "p5js-wrapper": "^1.2.3",
-    "three": "^0.158.0"
+    "astro": "^4.0.8"
   }
 }
