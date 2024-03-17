@@ -13,12 +13,12 @@ const { href, src, title, tags } = Astro.props;
 <article>
   <a href={href}>
     <Image
-    src={"/thumbnails/" + src + ".png"}
-    layout="constrained"
-    width={480}
-    height={128}
-    background="#8a2be2"
-    alt={title}
+      src={"/thumbnails/" + src + ".png"}
+      layout="constrained"
+      width={480}
+      height={128}
+      background="#8a2be2"
+      alt={title}
     />
   </a>
   <div class="card-info">
@@ -32,23 +32,20 @@ const { href, src, title, tags } = Astro.props;
   </div>
 </article>
 <style>
-  article{
-    background-color: rgb(238, 238, 238)   ; 
-    background: linear-gradient(90deg,rgb(224, 239, 242),rgb(239, 228, 243));
+  article {
+    background-color: rgb(238, 238, 238);
+    background: linear-gradient(90deg, #f0fff0, #fff0f5);
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.1s ease-in-out;
-  
   }
-  img{
+  img {
   }
-  article:hover{
-  
+  article:hover {
     transform: scale(0.95);
-    
   }
-  
-  a{
+
+  a {
     color: rgb(50, 49, 49);
     font-family: Arch;
     font-size: 1.2rem;
@@ -65,12 +62,11 @@ const { href, src, title, tags } = Astro.props;
     padding: 0 0.5rem;
   }
   .tags span {
-    background-color: rgb(225, 220, 220);
-    
-    color: rgb(99, 98, 98);
+    background-color: #d8bfd8;
+
+    color: #2f4f4f;
     border-radius: 5px;
-    
-   
+
     padding: 0.4rem;
   }
 </style>

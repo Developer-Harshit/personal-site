@@ -1,26 +1,14 @@
 export default [
   {
-    href: "/projects/colorify",
-    src: "template",
+    href: "https://",
+    src: "colourify",
     title: "Colorify",
-    tags: ["three.js", "webgl"],
+    tags: ["image processing"],
   },
   {
-    href: "/projects/colorify",
-    src: "template",
-    title: "Colorify",
-    tags: ["three.js", "webgl"],
-  },
-  {
-    href: "/projects/colorify",
-    src: "template",
-    title: "Colorify",
-    tags: ["three.js", "webgl"],
-  },
-  {
-    href: "/projects/colorify",
-    src: "template",
-    title: "Colorify",
-    tags: ["three.js", "webgl"],
+    href: "https://",
+    src: "chromosketch",
+    title: "Chromosketch",
+    tags: ["video effects"],
   },
 ];
